@@ -23,7 +23,14 @@ AUTHORS
 
 * Filip "Hadret" Chabik <hadret@gmail.com>
 
-_(Remember to add yourself here once when pull requesting)._
+_(Remember to add yourself here when pull requesting)._
+
+* * *
+
+LICENSE
+=======
+
+[CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 * * *
 
