@@ -18,6 +18,15 @@ _(In no particular order)._
 
 * * *
 
+AUTHORS
+=======
+
+* Filip "Hadret" Chabik <hadret@gmail.com>
+
+_(Remember to add yourself here once when pull requesting)._
+
+* * *
+
 Contents
 ========
 
