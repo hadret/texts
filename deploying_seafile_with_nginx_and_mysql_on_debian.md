@@ -13,6 +13,7 @@ TODO
 _(In no particular order)._
 
 * File/directory permissions (write/provide)
+* Uninstallation/removal steps (write/provide)
 * SSL certificates config (port)
 * Installation in non-root domain (port)
 
