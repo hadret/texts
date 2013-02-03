@@ -229,6 +229,8 @@ You may now start, stop, restart and check status of seafile via `sudo service s
 
     sudo service seafile start
 
+More information + additional instructions can be found on its dedicated [repository](https://github.com/hadret/Scripts/tree/master/seafile).
+
 
 6. Passing to reverse-proxy (nginx)
 ===================================
