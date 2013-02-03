@@ -7,6 +7,17 @@ If you find any bug, error or come up with some enhancement, please submit an [i
 
 * * *
 
+TODO
+====
+
+_(In no particular order)._
+
+* File/directory permissions (write/provide)
+* SSL certificates config (port)
+* Installation in non-root domain (port)
+
+* * *
+
 Contents
 ========
 
