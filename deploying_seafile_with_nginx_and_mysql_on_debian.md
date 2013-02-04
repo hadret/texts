@@ -193,6 +193,8 @@ Before you continue to next step, switch off seafile and seahub:
 b) PostgreSQL
 -------------
 
+*This is work in progress and doesn't yet work. There's [bug report](https://github.com/haiwen/seafile/issues/5) openeed on Seafile side.*
+
 Install PostgreSQL:
 
     sudo apt-get install -y postgresql-9.1 postgresql-client-9.1 python-psycopg2
