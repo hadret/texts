@@ -1,5 +1,5 @@
-Deploying Seafile with nginx and MySQL on Debian Wheezy
-=======================================================
+Deploying Seafile with nginx and MySQL/PostgreSQL on Debian Wheezy
+==================================================================
 
 This installation guide was created for Debian Wheezy and was tested only on it. However, there's high possibility that with none or minor hacking, this will also work on any other Linux distribution.
 
@@ -15,7 +15,9 @@ Following steps are going to be described in order to install and configure Seaf
 1. Installing prerequisites
 2. Creating system user
 3. Deploying Seafile
-4. Database establishing (MySQL)
+4. Database establishing
+   a) MySQL
+   b) PostgreSQL
 5. Setting up init script
 6. Passing to reverse-proxy (nginx)
 
@@ -71,8 +73,11 @@ My settings were following:
 
 I'm omitting user settings, cause they don't matter at this point -- DB setup will be overwritten by MySQL (by default Seafile is using SQLite3).
 
-4. Database establishing (MySQL)
-================================
+4. Database establishing
+========================
+
+a) MySQL
+--------
 
 Install MySQL:
 
@@ -107,8 +112,7 @@ Check connections:
     sudo -u seafile -H mysql -u seafile -p -D seafile-db
     sudo -u seafile -H mysql -u seafile -p -D seahub-db
 
-Configure ccnet to use MySQL:
------------------------------
+### Configure ccnet to use MySQL:
 
     cd /home/seafile
     sudo -u seafile -H vim seafile/ccnet/ccnet.conf
@@ -125,8 +129,7 @@ Append following configuration:
 
     # Remember to change $password to real value
 
-Configure Seafile to use MySQL:
--------------------------------
+### Configure Seafile to use MySQL:
 
     sudo -u seafile -H vim data/seafile.conf
 
@@ -142,8 +145,7 @@ Replace existing database section with following:
 
     # Remember to change $password to real value
 
-Configure seahub to use MySQL:
-------------------------------
+### Configure seahub to use MySQL:
 
     sudo -u seafile -H vim seafile/seahub_settings.py
 
@@ -161,13 +163,11 @@ Append following lines:
 
     # Remember to change $password to real value
 
-Create DB structures:
----------------------
+### Create DB structures:
 
     sudo -u seafile -H seafile/seafile-server-1.4.5/seafile.sh start
 
-Synchronize DBs, create tables and create superuser:
-----------------------------------------------------
+### Synchronize DBs, create tables and create superuser:
 
 This is one long step which involves couple of operations that need to be done in this particular order. So, at first there's a switch to seafile user, next changing directory to get into seahub application main directory. Following step is passing environment settings and issuing syncdb to fill in DBs with needed tables. Lastly, there's superuser creation (this is going to be the first user for your Seafile app), leaving seafile environment, going to app install directory and launching it (this can be done cause in previous step there was seafile server started).
 
@@ -189,6 +189,11 @@ Before you continue to next step, switch off seafile and seahub:
 
     sudo -u seafile -H ./seahub.sh stop
     sudo -u seafile -H ./seafile.sh stop
+
+b) PostgreSQL
+-------------
+
+WIP
 
 
 5. Setting up init script
