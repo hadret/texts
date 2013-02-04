@@ -7,6 +7,34 @@ If you find any bug, error or come up with some enhancement, please submit an [i
 
 * * *
 
+TODO
+====
+
+_(In no particular order)._
+
+* File/directory permissions (write/provide)
+* Uninstallation/removal steps (write/provide)
+* SSL certificates config (port)
+* Installation in non-root domain (port)
+
+* * *
+
+AUTHORS
+=======
+
+* Filip "Hadret" Chabik <hadret@gmail.com>
+
+_(Remember to add yourself here when pull requesting)._
+
+* * *
+
+LICENSE
+=======
+
+[CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
+
+* * *
+
 Contents
 ========
 
@@ -280,6 +308,8 @@ Append to file following configuration:
 You may now start, stop, restart and check status of seafile via `sudo service seafile {command}` or `sudo /etc/init.d/seafile {command}`:
 
     sudo service seafile start
+
+More information + additional instructions can be found on its dedicated [repository](https://github.com/hadret/Scripts/tree/master/seafile).
 
 
 6. Passing to reverse-proxy (nginx)
