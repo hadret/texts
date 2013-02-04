@@ -30,9 +30,9 @@ If you haven't already got it (depending on installation it might be missing in 
     apt-get update && apt-get upgrade && apt-get install sudo
 
 Install required packages:
-_(Note: you need to install sqlite3, cause setup is using it by default and MySQL is configured later on)._
+_(Note: you still need to install sqlite3, cause setup is using it by default and MySQL/PostgreSQL is configured later on)._
 
-    sudo apt-get install -y python2.7 python-setuptools python-simplejson python-imaging python-flup python-mysqldb sqlite3 
+    sudo apt-get install -y python2.7 python-setuptools python-simplejson python-imaging python-flup sqlite3 
 
 
 2. Creating system user
@@ -81,7 +81,7 @@ a) MySQL
 
 Install MySQL:
 
-    sudo apt-get install -y mysql-server mysql-client
+    sudo apt-get install -y mysql-server mysql-client python-mysqldb
 
 Login to MySQL:
 
