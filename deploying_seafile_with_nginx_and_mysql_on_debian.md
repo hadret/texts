@@ -44,8 +44,11 @@ Following steps are going to be described in order to install and configure Seaf
 2. Creating system user
 3. Deploying Seafile
 4. Database establishing
+
    a) MySQL
+
    b) PostgreSQL (WIP & [bug opened](https://github.com/haiwen/seafile/issues/5) on Seafile side)
+
 5. Setting up init script
 6. Passing to reverse-proxy (nginx)
 
@@ -221,7 +224,7 @@ Before you continue to next step, switch off seafile and seahub:
 b) PostgreSQL
 -------------
 
-*This is work in progress and doesn't yet work. There's [bug report](https://github.com/haiwen/seafile/issues/5) openeed on Seafile side.*
+**This is work in progress and doesn't yet work. There's [bug report](https://github.com/haiwen/seafile/issues/5) opened on Seafile side.**
 
 Install PostgreSQL:
 
