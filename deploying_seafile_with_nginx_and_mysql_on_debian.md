@@ -213,6 +213,61 @@ PostgreSQL make use of system users -- we already created this one in previous s
 
     # Remember to change $password to some real, secure value
 
+### Configure ccnet to use PostgreSQL:
+
+    cd /home/seafile
+    sudo -u seafile -H vim seafile/ccnet/ccnet.conf
+
+Append to file following configuration:
+
+    [Database]
+    ENGINE=postgresql
+    HOST=localhost
+    USER=seafile
+    PASSWD=$password
+    DB=ccnet-db
+    UNIX_SOCKET=/var/run/postgresql/.s.PGSQL.5432
+    
+    # Remember to change $password to real value
+
+### Configure seafile to use PostgreSQL:
+
+    sudo -u seafile -H vim data/seafile.conf
+
+Replace existing database section with following:
+
+    [database]
+    type=postgresql
+    host=localhost
+    user=seafile
+    password=$password
+    db_name=seafile-db
+    unix_socket=/var/run/postgresql/.s.PGSQL.5432
+    
+    # Remember to change $password to real value
+
+### Configure seahub to use PostgreSQL:
+
+    sudo -u seafile -H vim seafile/seahub_settings.py
+
+Append to file following configuration:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'USER': 'seafile',
+            'PASSWORD': '$password',
+            'NAME': 'seahub-db',
+            'HOST': '/var/run/postgresql/.s.PGSQL.5432',
+        }
+    }
+
+    # Remember to change $password to real value
+
+### Create DB structures:
+
+    sudo -u seafile -H seafile/seafile-server-1.4.5/seafile.sh start
+
 5. Setting up init script
 =========================
 
