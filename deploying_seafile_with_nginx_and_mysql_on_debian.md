@@ -16,6 +16,7 @@ _(In no particular order)._
 * Uninstallation/removal steps (write/provide)
 * SSL certificates config (port)
 * Installation in non-root domain (port)
+* Find a way for PostgreSQL to work (in progress)
 
 * * *
 
@@ -45,8 +46,9 @@ Following steps are going to be described in order to install and configure Seaf
 3. Deploying Seafile
 4. Database establishing
 
-    a) MySQL
-    b) PostgreSQL (WIP & [bug opened](https://github.com/haiwen/seafile/issues/5) on Seafile side)
+a) MySQL
+
+b) PostgreSQL (WIP & [bug opened](https://github.com/haiwen/seafile/issues/5) on Seafile side)
 
 5. Setting up init script
 6. Passing to reverse-proxy (nginx)
