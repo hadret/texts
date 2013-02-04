@@ -193,8 +193,25 @@ Before you continue to next step, switch off seafile and seahub:
 b) PostgreSQL
 -------------
 
-WIP
+Install PostgreSQL:
 
+    sudo apt-get install -y postgresql-9.1 postgresql-client-9.1 python-psycopg2
+
+Login to PostgreSQL:
+
+    sudo su - postgres
+
+PostgreSQL make use of system users -- we already created this one in previous step so we can carry on with user assignment and databases creation:
+
+    psql
+    postgres=# CREATE USER seafile WITH PASSWORD '$password';
+    postgres=# CREATE DATABASE "ccnet-db" OWNER seafile;
+    postgres=# CREATE DATABASE "seafile-db" OWNER seafile;
+    postgres=# CREATE DATABASE "seahub-db" OWNER seafile;
+    postgres=# \q
+    exit
+
+    # Remember to change $password to some real, secure value
 
 5. Setting up init script
 =========================
