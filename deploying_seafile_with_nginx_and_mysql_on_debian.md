@@ -44,11 +44,8 @@ Following steps are going to be described in order to install and configure Seaf
 2. Creating system user
 3. Deploying Seafile
 4. Database establishing
-
-   a) MySQL
-
-   b) PostgreSQL (WIP & [bug opened](https://github.com/haiwen/seafile/issues/5) on Seafile side)
-
+    a) MySQL
+    b) PostgreSQL (WIP & [bug opened](https://github.com/haiwen/seafile/issues/5) on Seafile side)
 5. Setting up init script
 6. Passing to reverse-proxy (nginx)
 
