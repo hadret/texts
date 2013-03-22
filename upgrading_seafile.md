@@ -46,6 +46,7 @@ Change to upgrade directory of your new Seafile server instance and launch the u
 
 Download new version of init script for Seafile, make sure it's executable and start it:
 
+    sudo rm /etc/init.d/seafile
     sudo wget https://github.com/hadret/Scripts/raw/stable-1.5.2/seafile/seafile -O /etc/init.d/seafile
     sudo chmod +x /etc/init.d/seafile
     sudo service seafile start
