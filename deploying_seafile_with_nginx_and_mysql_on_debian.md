@@ -73,15 +73,15 @@ _(Note: you still need to install sqlite3, cause setup is using it by default an
 Download Seafile for server:
 
     cd /home/seafile
-    sudo -u seafile -H wget -c http://seafile.googlecode.com/files/seafile-server_1.4.5_x86-64.tar.gz
+    sudo -u seafile -H wget -c http://seafile.googlecode.com/files/seafile-server_1.6.0_x86-64.tar.gz
 
 I'm going to follow suggested by Seafile authors directory layout:
 
     sudo -u seafile -H mkdir -p data seafile/installed
-    sudo -u seafile -H mv seafile-server_1.4.5_x86-64.tar.gz seafile/
+    sudo -u seafile -H mv seafile-server_1.6.0_x86-64.tar.gz seafile/
     cd seafile
-    sudo -u seafile -H tar -xzf seafile-server_1.4.5_x86-64.tar.gz
-    sudo -u seafile -H mv seafile-server_1.4.5_x86-64.tar.gz installed/
+    sudo -u seafile -H tar -xzf seafile-server_1.6.0_x86-64.tar.gz
+    sudo -u seafile -H mv seafile-server_1.6.0_x86-64.tar.gz installed/
 
 Setting Seafile up:
 
