@@ -16,7 +16,7 @@ _(In no particular order)._
 * Uninstallation/removal steps (write/provide)
 * SSL certificates config (port)
 * Installation in non-root domain (port)
-* Find a way for PostgreSQL to work (in progress). **PostgreSQL currently is not supported, please check this [bug report](https://github.com/haiwen/seafile/issues/5) for details.**
+* Find a way for PostgreSQL to work (in progress). **PostgreSQL is planned for Seafile's next release.**
 
 * * *
 
@@ -57,7 +57,7 @@ If you haven't already got it (depending on installation it might be missing in 
     apt-get update && apt-get upgrade && apt-get install sudo
 
 Install required packages:
-_(Note: you still need to install sqlite3, cause setup is using it by default and MySQL/PostgreSQL is configured later on)._
+_(Note: you still need to install sqlite3, cause setup is using it by default and MySQL is configured later on)._
 
     sudo apt-get install -y python2.7 python-setuptools python-simplejson python-imaging python-flup sqlite3 
 
