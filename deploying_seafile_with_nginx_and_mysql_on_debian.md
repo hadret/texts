@@ -217,7 +217,7 @@ Before you continue to next step, switch off seafile and seahub:
 5. Setting up init script
 =========================
 
-    sudo wget https://github.com/hadret/Scripts/raw/stable-1.6.0/seafile/seafile -O /etc/init.d/seafile
+    sudo wget https://github.com/hadret/Scripts/raw/master/seafile/seafile -O /etc/init.d/seafile
     sudo chmod +x /etc/init.d/seafile
     sudo update-rc.d seafile defaults 21
 
