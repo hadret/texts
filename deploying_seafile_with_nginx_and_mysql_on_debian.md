@@ -16,7 +16,7 @@ _(In no particular order)._
 * Uninstallation/removal steps (write/provide)
 * SSL certificates config (port)
 * Installation in non-root domain (port)
-* Find a way for PostgreSQL to work (in progress). **PostgreSQL is planned for Seafile's next release.**
+* Find a way for PostgreSQL to work (in progress). **PostgreSQL is planned for Seafiles next release.**
 
 * * *
 
@@ -85,7 +85,7 @@ I'm going to follow suggested by Seafile authors directory layout:
 
 Setting Seafile up:
 
-    cd seafile-server-1.4.5/
+    cd seafile-server-1.6.0/
     sudo -u seafile -H sh setup-seafile.sh
 
     # More details about this step are to be found on the official installation page, section Setup:
@@ -189,24 +189,24 @@ Append following lines:
 
 ### Create DB structures:
 
-    sudo -u seafile -H seafile/seafile-server-1.4.5/seafile.sh start
+    sudo -u seafile -H seafile/seafile-server-1.6.0/seafile.sh start
 
 ### Synchronize DBs, create tables and create superuser:
 
 This is one long step which involves couple of operations that need to be done in this particular order. So, at first there's a switch to seafile user, next changing directory to get into seahub application main directory. Following step is passing environment settings and issuing syncdb to fill in DBs with needed tables. Lastly, there's superuser creation (this is going to be the first user for your Seafile app), leaving seafile environment, going to app install directory and launching it (this can be done cause in previous step there was seafile server started).
 
     sudo su - seafile
-    cd seafile/seafile-server-1.4.5/seahub
+    cd seafile/seafile-server-1.6.0/seahub
 
     export CCNET_CONF_DIR=/home/seafile/seafile/ccnet
     export SEAFILE_CONF_DIR=/home/seafile/data
-    INSTALLPATH=/home/seafile/seafile/seafile-server-1.4.5
+    INSTALLPATH=/home/seafile/seafile/seafile-server-1.6.0
     export PYTHONPATH=${INSTALLPATH}/seafile/lib/python2.6/site-packages:${INSTALLPATH}/seafile/lib64/python2.6/site-packages:${INSTALLPATH}/seahub/thirdpart:$PYTHONPATH
     python manage.py syncdb
 
     python manage.py createsuperuser
     exit
-    cd /home/seafile/seafile/seafile-server-1.4.5
+    cd /home/seafile/seafile/seafile-server-1.6.0
     sudo -u seafile -H ./seahub.sh start-fastcgi
 
 Before you continue to next step, switch off seafile and seahub:
@@ -263,7 +263,7 @@ Put and edit accordingly following content:
     }       
 
     location /media {
-        root /home/seafile/seafile/seafile-server-1.4.5/seahub;
+        root /home/seafile/seafile/seafile-server-1.6.0/seahub;
     }
     }
 
