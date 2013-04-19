@@ -35,14 +35,14 @@ Stop the currently running instance, as you are about to start upgrade process:
 
 Remove older version that resides in your current folder, unpack new version and afterwards move unpacked folder one level up:
 
-    sudo -u seafile rm seafile-server-1.4.5.tar.gz
+    sudo -u seafile rm seafile-server-1.5.2.tar.gz
     sudo -u seafile unp seafile-server_1.6.0_x86-64.tar.gz
     sudo -u seafile mv seafile-server-1.6.0 ..
 
 Change to upgrade directory of your new Seafile server instance and launch the upgrade script:
 
     cd ../seafile-server-1.6.0/upgrade
-    sudo -u seafile ./upgrade_1.4_1.5.sh
+    sudo -u seafile ./upgrade_1.5_1.6.sh
 
 Download new version of init script for Seafile, make sure it's executable and start it:
 
@@ -55,7 +55,7 @@ Update nginx config file:
 
     sudo vi /etc/nginx/sites-available/seafile
 
-Change version from 1.4.5 (or any other you are upgrading from) to 1.6.0 in the location /media section and save it.
+Change version from 1.5.2 (or any other you are upgrading from) to 1.6.0 in the location /media section and save it.
 Reload nginx configuration:
 
     sudo service nginx reload
