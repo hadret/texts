@@ -157,7 +157,7 @@ Append following configuration:
 
     sudo -u seafile -H vim data/seafile.conf
 
-Replace existing database section with following:
+Replace existing database section for SQLite3 with following:
 
     [database]
     type=mysql
