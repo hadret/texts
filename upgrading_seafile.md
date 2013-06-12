@@ -1,7 +1,7 @@
 Upgrading Seafile
 =================
 
-This upgrade guide assumes, that you previously followed [Deploying Seafile with nginx and MySQL on Debian Wheezy](https://github.com/hadret/Texts/blob/master/deploying_seafile_with_nginx_and_mysql_on_debian.md) and now you are upgrading to the latest stable release, 1.6.0.
+This upgrade guide assumes, that you previously followed [Deploying Seafile with nginx and MySQL on Debian Wheezy](https://github.com/hadret/Texts/blob/master/deploying_seafile_with_nginx_and_mysql_on_debian.md) and now you are upgrading to the latest stable release, 1.7.0.
 
 * * *
 
@@ -23,7 +23,7 @@ LICENSE
 
 Download latest version via:
 
-    sudo -u seafile wget -O /home/seafile/seafile/installed/seafile-server_1.6.0_x86-64.tar.gz http://seafile.googlecode.com/files/seafile-server_1.6.0_x86-64.tar.gz
+    sudo -u seafile wget -O /home/seafile/seafile/installed/seafile-server_1.7.0_x86-64.tar.gz http://seafile.googlecode.com/files/seafile-server_1.7.0_x86-64.tar.gz
 
 Change to deployment directory where `installed` folder inside your seafile main location:
 
@@ -35,19 +35,19 @@ Stop the currently running instance, as you are about to start upgrade process:
 
 Remove older version that resides in your current folder, unpack new version and afterwards move unpacked folder one level up:
 
-    sudo -u seafile rm seafile-server-1.5.2.tar.gz
-    sudo -u seafile unp seafile-server_1.6.0_x86-64.tar.gz
-    sudo -u seafile mv seafile-server-1.6.0 ..
+    sudo -u seafile rm seafile-server-1.6.0.tar.gz
+    sudo -u seafile unp seafile-server_1.7.0_x86-64.tar.gz
+    sudo -u seafile mv seafile-server-1.7.0 ..
 
 Change to upgrade directory of your new Seafile server instance and launch the upgrade script:
 
-    cd ../seafile-server-1.6.0/upgrade
-    sudo -u seafile ./upgrade_1.5_1.6.sh
+    cd ../seafile-server-1.7.0/upgrade
+    sudo -u seafile ./upgrade_1.6_1.7.sh
 
 Download new version of init script for Seafile, make sure it's executable and start it:
 
     sudo rm /etc/init.d/seafile
-    sudo wget https://github.com/hadret/Scripts/raw/stable-1.6.0/seafile/seafile -O /etc/init.d/seafile
+    sudo wget https://github.com/hadret/Scripts/raw/stable-1.7.0/seafile/seafile -O /etc/init.d/seafile
     sudo chmod +x /etc/init.d/seafile
     sudo service seafile start
 
@@ -55,7 +55,7 @@ Update nginx config file:
 
     sudo vi /etc/nginx/sites-available/seafile
 
-Change version from 1.5.2 (or any other you are upgrading from) to 1.6.0 in the location /media section and save it.
+Change version from 1.6.0 (or any other you are upgrading from) to 1.7.0 in the location /media section and save it.
 Reload nginx configuration:
 
     sudo service nginx reload
